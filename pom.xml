@@ -1,0 +1,61 @@
+<project
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.soebes.smpp</groupId>
+    <artifactId>smpp</artifactId>
+    <version>0.5</version>
+  </parent>
+
+  <groupId>com.soebes.learning.coderetreat</groupId>
+  <artifactId>session</artifactId>
+  <version>0.1-SNAPSHOT</version>
+
+  <name>Code Retreat</name>
+  <url>https://github.com/khmarbaise/coderetreat</url>
+  <inceptionYear>2022</inceptionYear>
+
+  <issueManagement>
+    <system>default</system>
+    <url>https://github.com/khmarbaise/coderetreat/issues</url>
+  </issueManagement>
+
+  <scm>
+    <developerConnection>scm:git:git@github.com:khmarbaise/coderetreat.git</developerConnection>
+    <connection>scm:git:git://github.com/khmarbaise/coderetreat.git</connection>
+    <url>https://github.com/khmarbaise/coderetreat</url>
+  </scm>
+
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-changes-plugin</artifactId>
+        <configuration>
+          <issueLinkTemplatePerSystem>
+            <default>https://github.com/khmarbaise/coderetreat/issues/%ISSUE% </default>
+          </issueLinkTemplatePerSystem>
+        </configuration>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>changes-report</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+    </plugins>
+  </reporting>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+</project>
