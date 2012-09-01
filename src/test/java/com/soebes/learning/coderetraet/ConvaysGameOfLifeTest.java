@@ -8,8 +8,9 @@ public class ConvaysGameOfLifeTest {
 
 	@Test
 	public void firstTest() {
-		assertThat(true).isTrue();
-		
+		Universe universe = new Universe();
+		universe.setCellState(new Point(0,0), CellState.Alive);
+		assertThat(universe.getCellState(new Point(0, 0))).isEqualTo(CellState.Alive);
 	}
 
 }
