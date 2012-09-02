@@ -28,4 +28,8 @@ public class Universe {
         return cellStates.get(point);
     }
 
+    public int getNumberOfLivingCells(Point point) {
+        return 0;
+    }
+
 }

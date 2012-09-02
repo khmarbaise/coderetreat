@@ -2,6 +2,9 @@ package com.soebes.learning.coderetraet;
 
 import static org.fest.assertions.Assertions.assertThat;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -42,8 +45,29 @@ public class ConwaysGameOfLifeTest {
 	}
 
 	@Test
-    public void getStateAfterInitializationBack() {
+    public void getStateBackAfterInitialization() {
         assertThat(universe.getCellState(new Point(1, 0))).isEqualTo(CellState.Dead);
     }
 
+	@Test
+	public void xx() {
+	    //Given
+	    List<Point> listOfPoints = Arrays.asList(new Point(0,0), new Point(0,1), new Point(0,2));
+
+	    for (Point point : listOfPoints) {
+            universe.setCellState(point, CellState.Alive);
+        }
+
+	    //When
+	    int numberOfLivingCells = 0;
+	    for (Point point : listOfPoints) {
+            CellState result = universe.getCellState(point);
+            if (result.equals(CellState.Alive)) {
+                numberOfLivingCells++;
+            }
+        }
+
+	    //Then
+	    assertThat(numberOfLivingCells).isEqualTo(3);
+	}
 }
