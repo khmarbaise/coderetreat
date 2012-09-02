@@ -13,4 +13,10 @@ public class ConvaysGameOfLifeTest {
 		assertThat(universe.getCellState(new Point(0, 0))).isEqualTo(CellState.Alive);
 	}
 
+	@Test
+	public void secondTest() {
+		Universe universe = new Universe();
+		universe.setCellState(new Point(1,0), CellState.Alive);
+		assertThat(universe.getCellState(new Point(1, 0))).isEqualTo(CellState.Alive);
+	}
 }
